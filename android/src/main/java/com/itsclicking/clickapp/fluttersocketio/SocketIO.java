@@ -119,6 +119,7 @@ public class SocketIO {
     private void onSocketCallback(final String status, Object... args) {
         if (_methodChannel != null && !Utils.isNullOrEmpty(_statusCallback)) {
             final Handler _handler = new Handler(Looper.getMainLooper());
+            Utils.log(TAG, "ebob jelek" + status);
             _handler.post(new Runnable() {
                 @Override
                 public void run() {
